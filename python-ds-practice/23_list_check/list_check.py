@@ -1,0 +1,15 @@
+def list_check(lst):
+    """Are all items in lst a list?
+
+        >>> list_check([[1], [2, 3]])
+        True
+
+        >>> list_check([[1], "nope"])
+        False
+    """
+    return all([isinstance(i, list) for i in lst])
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
